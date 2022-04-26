@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UML", "UML\UML.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Car", "Car\Car.vcxproj", "{7AFEB0A6-448C-46FF-9D37-2CDFB9B1153A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ListBox", "ListBox\ListBox.vcxproj", "{A5A0B69F-D521-4018-980B-23EA2AC34EEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{7AFEB0A6-448C-46FF-9D37-2CDFB9B1153A}.Release|x64.Build.0 = Release|x64
 		{7AFEB0A6-448C-46FF-9D37-2CDFB9B1153A}.Release|x86.ActiveCfg = Release|Win32
 		{7AFEB0A6-448C-46FF-9D37-2CDFB9B1153A}.Release|x86.Build.0 = Release|Win32
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Debug|x64.ActiveCfg = Debug|x64
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Debug|x64.Build.0 = Debug|x64
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Debug|x86.ActiveCfg = Debug|Win32
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Debug|x86.Build.0 = Debug|Win32
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Release|x64.ActiveCfg = Release|x64
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Release|x64.Build.0 = Release|x64
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Release|x86.ActiveCfg = Release|Win32
+		{A5A0B69F-D521-4018-980B-23EA2AC34EEC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
