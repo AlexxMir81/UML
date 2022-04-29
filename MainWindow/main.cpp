@@ -1,13 +1,13 @@
-#include<Windows.h>
+п»ї#include<Windows.h>
 
-CONST CHAR g_szClassName[] = "MyWindowClass"; //имя класса окна
-CONST CHAR g_szWindowTitle[] = "My first Window"; //заголовок окна
+CONST CHAR g_szClassName[] = "MyWindowClass"; //РёРјСЏ РєР»Р°СЃСЃР° РѕРєРЅР°
+CONST CHAR g_szWindowTitle[] = "My first Window"; //Р·Р°РіРѕР»РѕРІРѕРє РѕРєРЅР°
 
 INT CALLBACK WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	//1) Регистрация класса окна:
+	//1) Р РµРіРёСЃС‚СЂР°С†РёСЏ РєР»Р°СЃСЃР° РѕРєРЅР°:
 	WNDCLASSEX wc; //wc- Windows Class
 	wc.cbSize = sizeof(WNDCLASSEX);
 	wc.cbClsExtra = 0;
@@ -18,8 +18,8 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	wc.hCursor = LoadCursor(hInstance, IDC_ARROW);
 	wc.hInstance = hInstance;
 	wc.hbrBackground = (HBRUSH)COLOR_WINDOW;
-	wc.lpfnWndProc = (WNDPROC)WndProc; //имя фукции - это указатель на функцию, оно содержить адрес,
-	//по которому функция загружена в память
+	wc.lpfnWndProc = (WNDPROC)WndProc; //РёРјСЏ С„СѓРєС†РёРё - СЌС‚Рѕ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° С„СѓРЅРєС†РёСЋ, РѕРЅРѕ СЃРѕРґРµСЂР¶РёС‚СЊ Р°РґСЂРµСЃ,
+	//РїРѕ РєРѕС‚РѕСЂРѕРјСѓ С„СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР¶РµРЅР° РІ РїР°РјСЏС‚СЊ
 	wc.lpszClassName = g_szClassName;
 	wc.lpszMenuName = NULL;
 
@@ -27,16 +27,24 @@ INT WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	{
 		MessageBox(NULL, "Class registration failed! :(", "Error", MB_OK | MB_ICONERROR);
 	}
-	//2) Создание окна:
+	//2) РЎРѕР·РґР°РЅРёРµ РѕРєРЅР°:
 	HWND hwnd = CreateWindowEx
 	(
-		NULL, //exStyle дополнительные стили
+		NULL, //exStyle РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃС‚РёР»Рё
 		g_szClassName,
 		g_szWindowTitle,
-		WS_OVERLAPPEDWINDOW, //Главное окно, у которого есть строка заголовка, 
-		//кнопки управления окном, может изменяться по размерам
+		WS_OVERLAPPEDWINDOW, //Р“Р»Р°РІРЅРѕРµ РѕРєРЅРѕ, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РµСЃС‚СЊ СЃС‚СЂРѕРєР° Р·Р°РіРѕР»РѕРІРєР°, 
+							//РєРЅРѕРїРєРё СѓРїСЂР°РІР»РµРЅРёСЏ РѕРєРЅРѕРј, РјРѕР¶РµС‚ РёР·РјРµРЅСЏС‚СЊСЃСЏ РїРѕ СЂР°Р·РјРµСЂР°Рј
+		CW_USEDEFAULT, CW_USEDEFAULT, //РїРѕР»РѕР¶РµРЅРёРµ РѕРєРЅР° РЅР° СЌРєСЂР°РЅРµ РІ РїРёРєСЃРµР»СЏС…
+		CW_USEDEFAULT, CW_USEDEFAULT, // СЂР°Р·РјРµСЂ РѕРєРЅР° РІ РїРёСЃРµР»СЏС…
+		NULL,  //СЂРѕРґРёС‚РµР»СЊСЃРєРѕРµ РѕРєРЅРѕ Parent Window
+		NULL,  //РјРµРЅСЋ(РІ РґР°РЅРЅРѕРј СЃР»СѓС‡Р°Рµ РЅРµС‚ ID СЂРµСЃСѓСЂСЃР° РјРµРЅСЋ, РµСЃР»Рё РѕРєРЅРѕ РіР»Р°РІРЅРѕРµ (OVERLAPPED),
+		       //РёР»Рё ID СЌС‚РѕРіРѕ РѕРєРЅР°, РµСЃР»Рё РѕРєРЅРѕ РґРѕС‡РµСЂРЅРµРµ
+		
+
+
 	)
-	//3) Запуск цикла сообщений:
+	//3) Р—Р°РїСѓСЃРє С†РёРєР»Р° СЃРѕРѕР±С‰РµРЅРёР№:
 
 	return 0;
 }
